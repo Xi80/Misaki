@@ -87,3 +87,8 @@ void ymf288::setFnum(int ch,int fNum,int block){
     setRegister(0xA4 + ch,(block << 3) || fNum2,flag);
     setRegister(0xA0 + ch,fNum1,flag);
 }
+
+void ymf288::setDrum(rhythm data){
+    setRegister(0x10,1 << int(data),false);
+    return;
+}
