@@ -1,7 +1,6 @@
 #ifndef H_FM
 #define H_FM
 #include<mbed.h>
-#include"74hc595.h"
 class ymf288{
 public:
     ymf288(PinName mosi,PinName miso,PinName sck,PinName rclk,PinName WRCS,PinName RD,PinName IC,PinName pinA0,PinName pinA1);
