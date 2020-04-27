@@ -3,14 +3,6 @@
 #include<mbed.h>
 class ymf288{
 public:
-    enum rhythm{
-        BD = 0,
-        SD = 1,
-        TOP= 2,
-        HH = 3,
-        TOM= 4,
-        RIM= 5
-    };
     ymf288(PinName mosi,PinName miso,PinName sck,PinName rclk,PinName WRCS,PinName RD,PinName IC,PinName pinA0,PinName pinA1);
     void setRegister(uint8_t addr,uint8_t data,bool page);
     void reset(void);
@@ -18,7 +10,7 @@ public:
     void setParam(int ch,int algorithm,int feedback);
     void setParam(int ch,int ar[4],int dr[4],int sr[4],int rr[4],int sl[4],int ol[4],int ks[4],int ml[4],int dt[4],int ams[4]);
     void setFnum(int ch,int fNum,int block);
-    void setDrum(rhythm data);
+    void setDrum(int data);
     void setVol(int ch,int vol);
 private:
     DigitalOut _rclk;

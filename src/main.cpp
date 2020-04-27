@@ -200,7 +200,56 @@ void noteOn(int ch,int note){
     }
   } else {
     //drum
-    
+    switch(note){
+      case 0x23:
+        FM1.setDrum(1);
+        break;
+      case 0x24:
+        FM1.setDrum(1);
+        break;
+      case 0x26:
+        FM1.setDrum(1 << 1);
+        break;
+      case 0x28:
+        FM1.setDrum(1 << 1);
+        break;
+      case 0x29:
+        FM1.setDrum(1 << 4);
+        break;
+      case 0x2B:
+        FM1.setDrum(1 << 4);
+        break;
+      case 0x2D:
+        FM1.setDrum(1 << 4);
+        break;
+      case 0x2F:
+        FM1.setDrum(1 << 4);
+        break;
+      case 0x30:
+        FM1.setDrum(1 << 4);
+        break;
+      case 0x32:
+        FM1.setDrum(1 << 4);
+        break;
+      case 0x31:
+        FM1.setDrum(1 << 2);
+        break;
+      case 0x33:
+        FM1.setDrum(1 << 2);
+        break;
+      case 0x39:
+        FM1.setDrum(1 << 2);
+        break;
+      case 0x2A:
+        FM1.setDrum((1 << 3));
+        break;
+      case 0x2C:
+        FM1.setDrum((1 << 3));
+        break;
+      case 0x2E:
+        FM1.setDrum((1 << 3));
+        break;
+    }
   }
 }
 
